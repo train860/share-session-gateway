@@ -1,0 +1,24 @@
+
+spring:
+  cloud:
+    gateway:
+      #default-filters:
+      #  - SessionAuth
+      routes:
+        - id: route1
+          uri: http://127.0.0.1:8081
+          filters:
+          #  - StripPrefix=3
+            - SessionAuth
+          predicates:
+            - Path=/api/**
+        - id: route2
+          uri: http://127.0.0.1:8080
+          predicates:
+            - Path=/japi/**
+  redis:
+    database: 2
+    host: paas.feelbang.com
+    password: Zaq12wsx@123!
+server:
+  port: 9090
