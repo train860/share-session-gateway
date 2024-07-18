@@ -18,7 +18,7 @@ spring:
             - Path=/japi/**
   redis:
     database: 1
-    host: 10.89.3.58
+    host: 10.89.3.48
     password: Zaq12wsx@123!
 server:
   port: 9090
